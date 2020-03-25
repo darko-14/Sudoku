@@ -33,17 +33,23 @@ def displayBoard():
 displayBoard()
 
 while True:
+
+    validNumbers = [1,2,3,4,5,6,7,8,9]
     number = input("Enter number from 1-9: ")    
     number = int(number)
-    print("Choose first a number from Y-axis, than a number from X-axis")
-    position = input("Choose position by grid: ")
-    position = int(position)
+    if number in validNumbers:
+
+        print("Choose first a number from Y-axis, than a number from X-axis")
+        position = input("Choose position by grid: ")
+        position = int(position)
 
 
-    if position in board.keys():
-        board[position] = number
-        displayBoard()
+        if position in board.keys():
+            board[position] = number
+            displayBoard()
+        else:
+            print("This ain't it chief!")
     else:
-        print("This ain't it chief!")
+        print("Wrong number!")
 
 
