@@ -1,25 +1,29 @@
 # Sudoku
 Sudoku in terminal
 
-- global variable is_game_on = True
+- global variable is_game_on = True                                                                     # DONE
 
-- make the board as a dictionary
+- make the board as a dictionary                                                                        # DONE
 
-- while global variable is True:
-  generate random numbers from 1-9 and put them in random positions(~25)
-  and display as a initial board
-  - display the board function
+- while global variable is True:                                                                        # DONE
+  generate random numbers from 1-9 and put them in random positions(~25)                                ?
+  and display as a initial board                                                                        ?  
+  - display the board function                                                                          # DONE
   
-- input number on the board and specific position:
-  check if number is from 1-9 and position is in the dictionary as a key
+- input number on the board and specific position:                                                      # DONE
+  check if number is from 1-9 and position is in the dictionary as a key                                # DONE
 
-- check if position is valid:
-  check rows, columns, box
-  - if it is place number on board and displayBoard()
-  - else print "You cant place there"
+- function for not overriding a position                                                                # DONE
 
-- game is over function:
-  global variable is False
-  print "Well done."
+- check if position is valid:                                                                           ?
+  check rows, columns, box                                                                              ?  
+  - if it is place number on board and displayBoard()                                                   ?
+  - else print "You cant place there"                                                                   ?
+
+- game is over function:                                                                                # DONE
+  global variable is False                                                                              # DONE
+  print "Well done."                                                                                    # DONE      
   
-  - Maybe a timer function
+- Backtracking algorithm for solving the game                                                           ?    
+
+  - Maybe a timer function                                                                              ?      
