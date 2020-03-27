@@ -14,6 +14,7 @@
 ##                                                                                                                       ##
 ##                                                                                                                       ## 
 ###########################################################################################################################
+import random
 
 board = {
     11: "-", 12: "-", 13: "-", 14: "-", 15: "-", 16: "-", 17: "-", 18: "-", 19: "-",
@@ -28,7 +29,6 @@ board = {
 }
 
 gameIsOn = True
-
 
 def displayBoard():
     print()
@@ -50,6 +50,7 @@ def displayBoard():
 
 
 def play_game():
+    generate_random_numbers()
     displayBoard()
     while gameIsOn:
         validNumbers = [1,2,3,4,5,6,7,8,9]
@@ -73,9 +74,7 @@ def play_game():
         else:
             print("The number needs to be from 1 to 9!")
 
-
-        # check_if_table_is_full()
-
+        check_if_table_is_full()
 
 def check_valid_position():
     check_row()
@@ -96,12 +95,8 @@ def check_row():
     rows = [row_1, row_2, row_3, row_4, row_5, row_6, row_7, row_8, row_9]
 
     for row in rows:
-        if set(row):
-            return True
-        else:
-            return False
+        pass
 
-            
 def check_column():
     column_1 = [ board.get(11), board.get(21), board.get(31), board.get(41), board.get(51), board.get(61), board.get(71), board.get(81).board.get(91) ]
     column_2 = [ board.get(12), board.get(22), board.get(32), board.get(42), board.get(52), board.get(62), board.get(72), board.get(82).board.get(92) ]
@@ -115,12 +110,7 @@ def check_column():
 
     columns = [column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9]
 
-    for col in columns:
-        if set(col):
-            return True
-        else:
-            return False
-
+    pass
 
 def check_box():
     box_1 = [ board.get(11), board.get(12), board.get(13), board.get(21), board.get(22), board.get(23), board.get(31), board.get(32), board.get(33) ]
@@ -135,27 +125,37 @@ def check_box():
 
     boxes = [box_1, box_2, box_3, box_4, box_5, box_6, box_7, box_8, box_9]
 
-    for box in boxes:
-        if set(box):
-            return True
-        else:
-            return False
+    pass
 
 
 def check_if_table_is_full():
     global gameIsOn
-    for i in board.values():
-        if i == "-":
-            gameIsOn = True
-        else:
-            game_is_over()
+    if "-" not in board.values():
+        game_is_over()
+
+    
 
 
 def game_is_over():
     global gameIsOn
-    check_valid_position()
+    
+    print("Game over.")
+    # valid = check_valid_position()
+    # if valid:
+    #     print("Well done!")
+    # else:
+    #     print("Wrong solution!")
     gameIsOn = False
-    print("Well done!")
+
+def generate_random_numbers():
+    ran = random.sample(list(board), 30)
+    nums = [1,2,3,4,5,6,7,8,9]
+    for i in ran:
+        n = random.choice(nums)
+        board[i] = n
+
+
+
 
 
 play_game()

@@ -3,11 +3,11 @@ Sudoku in terminal
 
 - global variable is_game_on = True                                                                     # DONE
 
-- make the board as a dictionary                                                                        # DONE
+- make the board as a dictionary                                                                         # DONE
 
 - while global variable is True:                                                                        # DONE
-  generate random numbers from 1-9 and put them in random positions(~25)                                ?
-  and display as a initial board                                                                        ?  
+  generate random numbers from 1-9 and put them in random positions(~25)                                # DONE
+  and display as a initial board                                                                        # DONE
   - display the board function                                                                          # DONE
   
 - input number on the board and specific position:                                                      # DONE
@@ -22,8 +22,8 @@ Sudoku in terminal
 
 - game is over function:                                                                                # DONE
   global variable is False                                                                              # DONE
-  print "Well done."                                                                                    # DONE      
-  
+  print "Well done."                                                                                    # DONE   
+   
 - Backtracking algorithm for solving the game                                                           ?    
 
   - Maybe a timer function                                                                              ?      
